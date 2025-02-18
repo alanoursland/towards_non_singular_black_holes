@@ -1,0 +1,92 @@
+\section{Mathematical Framework}
+\label{sec:math_framework}
+
+The core hypothesis of a self-regulating black hole interior requires a formal mathematical treatment. In this section, we construct the governing equations for the interplay between local Hawking-like radiation and gravitational collapse, derive equilibrium conditions, and examine the implications for the black hole core.
+
+\subsection{Local Radiation Emission as a Function of Curvature}
+
+We propose that the local emission rate of Hawking-like radiation inside the event horizon depends on the local spacetime curvature \( \mathcal{R}(r) \). This extends the conventional Hawking radiation formula, which applies near the event horizon, to a more general form inside the black hole.
+
+The radiation rate per unit volume is given by:
+\begin{equation}
+    \Gamma_H(r) = f(\mathcal{R}(r)) \frac{1}{M^2},
+\end{equation}
+where:
+\begin{itemize}
+    \item \( \mathcal{R}(r) \) is the local Ricci scalar curvature,
+    \item \( f(\mathcal{R}) \) is an increasing function of curvature (\( \frac{df}{d\mathcal{R}} > 0 \)),
+    \item \( M \) is the black hole mass.
+\end{itemize}
+
+A possible functional form for \( f(\mathcal{R}) \) is:
+\begin{equation}
+    f(\mathcal{R}) = f_0 \left( 1 - e^{-\alpha (\mathcal{R} - \mathcal{R}_0)} \right),
+\end{equation}
+where \( \mathcal{R}_0 \) represents a reference curvature scale, and \( \alpha \) controls the response strength. This ensures that radiation grows with increasing curvature but saturates at extreme values.
+
+\subsection{Balance Between Radiation and Gravitational Collapse}
+
+Inside the black hole, matter undergoes gravitational collapse, increasing local curvature. However, as curvature rises, local radiation emission also increases. The equilibrium condition occurs when the outward radiation flux balances the inward gravitational collapse flux.
+
+The energy flux due to gravitational collapse is modeled as:
+\begin{equation}
+    \Phi_{\text{collapse}}(r) = \frac{dM_{\text{infall}}}{dt},
+\end{equation}
+where \( M_{\text{infall}} \) represents the local mass inflow rate.
+
+The equilibrium condition is:
+\begin{equation}
+    \Gamma_H(\mathcal{R}_c) = \Phi_{\text{collapse}}(\mathcal{R}_c),
+\end{equation}
+where \( \mathcal{R}_c \) is the equilibrium curvature.
+
+\subsection{Energy Conservation and the Core Radius}
+
+The evolution of the black hole interior is governed by the local mass-energy conservation equation:
+\begin{equation}
+    \frac{\partial M(r, t)}{\partial t} + \frac{\partial \Phi(r,t)}{\partial r} = -\Gamma_H(r, t),
+\end{equation}
+where:
+\begin{itemize}
+    \item \( M(r,t) \) is the mass-energy contained within radius \( r \),
+    \item \( \Phi(r,t) \) is the net energy flux,
+    \item \( \Gamma_H(r,t) \) represents the local radiation loss.
+\end{itemize}
+
+The core radius \( r_c \) is defined as the radius at which equilibrium is first achieved. It is obtained from the condition:
+\begin{equation}
+    \mathcal{R}(r_c) = \mathcal{R}_c.
+\end{equation}
+If \( \mathcal{R}_c \) is at the Planck scale, then the core radius satisfies:
+\begin{equation}
+    r_c \sim \sqrt{\frac{\hbar G}{c^3}}.
+\end{equation}
+
+\subsection{Avoidance of the Singularity}
+
+If equilibrium is achieved, the curvature does not diverge to infinity but stabilizes at a finite value:
+\begin{equation}
+    \mathcal{R}(r) =
+    \begin{cases}
+        \mathcal{R}_c, & 0 \leq r \leq r_c, \\
+        \text{dynamical}, & r_c < r < r_s.
+    \end{cases}
+\end{equation}
+This means:
+\begin{itemize}
+    \item The singularity is replaced by a regulated core.
+    \item The mass-energy distribution is structured rather than a point collapse.
+    \item The black hole interior becomes dynamically stable.
+\end{itemize}
+
+\subsection{Implications for Black Hole Evolution}
+
+Since the core maintains equilibrium, the global evolution of the black hole follows a two-step process:
+\begin{enumerate}
+    \item Gradual Hawking radiation emission from the event horizon, leading to black hole mass loss.
+    \item Internal restructuring, where the core adjusts dynamically to maintain equilibrium.
+\end{enumerate}
+
+As the black hole evaporates, the core radius \( r_c \) may shrink, possibly leaving behind a stable remnant instead of complete evaporation.
+
+The next section investigates the stability properties of this self-regulating core and whether perturbations lead to instability or long-term persistence.

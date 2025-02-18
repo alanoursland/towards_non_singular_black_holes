@@ -1,0 +1,72 @@
+\section{The Core Hypothesis: A Self-Regulating Black Hole Interior}
+\label{sec:core_hypothesis}
+
+The standard model of black holes, based on general relativity, predicts that matter within the event horizon undergoes unrestricted collapse, forming a singularity where spacetime curvature and energy density diverge. However, quantum effects, particularly those associated with Hawking radiation, suggest that this picture may be incomplete. We propose a self-regulating mechanism within black holes that prevents singularity formation and leads to an equilibrium core of finite curvature.
+
+\subsection{Postulate 1: Curvature-Dependent Local Radiation}
+Hawking radiation is typically derived as a quantum process occurring near the event horizon \cite{hawking1975particle}, where vacuum fluctuations generate particle-antiparticle pairs, with one escaping as radiation. In our framework, we extend this idea by proposing that a similar effect occurs \textit{locally} within the black hole interior, with radiation emission dependent on the local curvature.
+
+Formally, we define the local radiation emission rate as:
+\begin{equation}
+    \Gamma_H(r) = f(\mathcal{R}(r)) \frac{1}{M^2},
+\end{equation}
+where:
+\begin{itemize}
+    \item \( \mathcal{R}(r) \) is the local spacetime curvature at radius \( r \),
+    \item \( f(\mathcal{R}) \) is a function encoding the dependence of radiation on curvature,
+    \item \( M \) is the black hole mass.
+\end{itemize}
+
+We assume that \( f(\mathcal{R}) \) is a monotonic function satisfying:
+\begin{equation}
+    \frac{df}{d\mathcal{R}} > 0.
+\end{equation}
+This implies that regions of higher curvature experience stronger radiation effects. 
+
+At the event horizon, where \( \mathcal{R}(r) \approx \mathcal{R}(r_s) \), we recover standard Hawking radiation. However, as we move deeper into the interior, the radiation rate increases due to rising curvature, eventually modifying the internal structure.
+
+\subsection{Postulate 2: Balance Between Radiation and Collapse}
+Within the event horizon, classical physics dictates that matter collapses toward \( r=0 \). However, in our model, the increasing radiation flux at high curvature counteracts this collapse. 
+
+We propose that an equilibrium condition is established when the local radiation flux matches the rate of gravitational collapse:
+\begin{equation}
+    \Gamma_H(\mathcal{R}_c) = \Phi_{\text{collapse}}(\mathcal{R}_c),
+\end{equation}
+where:
+\begin{itemize}
+    \item \( \mathcal{R}_c \) is the curvature at equilibrium,
+    \item \( \Phi_{\text{collapse}}(\mathcal{R}) \) represents the inward flux due to gravitational collapse.
+\end{itemize}
+
+This balance prevents the curvature from diverging to infinity, stabilizing the core at a finite curvature \( \mathcal{R}_c \).
+
+\subsection{Postulate 3: Formation of a Constant Curvature Core}
+If equilibrium is achieved, the black hole interior does not collapse into a singularity. Instead, for radii \( r \leq r_c \), the curvature stabilizes at a constant value:
+\begin{equation}
+    \mathcal{R}(r) = \mathcal{R}_c.
+\end{equation}
+
+This implies:
+\begin{itemize}
+    \item A finite energy density, satisfying Einstein’s equation:
+    \begin{equation}
+        \mathcal{R}_c \sim 8\pi G \rho_c.
+    \end{equation}
+    \item A non-singular core that remains dynamically stable.
+    \item The possibility that the equilibrium curvature is set by quantum gravity effects, potentially at the Planck scale:
+    \begin{equation}
+        \mathcal{R}_c \sim \frac{c^3}{\hbar G}.
+    \end{equation}
+\end{itemize}
+
+\subsection{Physical Interpretation and Implications}
+This framework suggests that black holes do not have singularities but instead develop structured interiors. The self-regulating mechanism introduces a feedback loop:
+\begin{enumerate}
+    \item Higher curvature generates more radiation.
+    \item Increased radiation counteracts gravitational collapse.
+    \item Equilibrium is reached when the two effects balance.
+\end{enumerate}
+
+This model aligns with several non-singular black hole proposals, including regular black holes \cite{bardeen1968non, hayward2006formation}, quantum gravity-based structures \cite{bojowald2005nonsingular, rovelli1996black}, and recent proposals for Planck-scale remnants \cite{brustein2018black}. 
+
+The next section presents the mathematical framework necessary to formalize these equilibrium conditions.
