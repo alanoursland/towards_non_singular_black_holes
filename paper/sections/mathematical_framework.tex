@@ -5,9 +5,9 @@ The self-regulating black hole core hypothesis relies on a balance between local
 
 \subsection{Local Radiation Emission as a Function of Curvature}
 
-Standard Hawking radiation is derived as a global effect dependent on the event horizon. In our model, we extend this concept to assume that radiation is generated locally throughout the black hole interior, with an emission rate that depends on the local curvature. 
+Standard Hawking radiation is derived as a global effect dependent on the event horizon. In our model, we extend this concept to assume that radiation is generated locally throughout the black hole interior, with an emission rate that depends on the local curvature.
 
-We introduce the heuristic expression:
+We define a continuous emission function based on the gravitational gradient:
 \begin{equation}
     \Gamma_H(r) = f(\mathcal{R}(r)) \frac{1}{M^2},
 \end{equation}
@@ -22,52 +22,60 @@ The function \( f(\mathcal{R}) \) must satisfy:
 \begin{equation}
     \frac{df}{d\mathcal{R}} > 0,
 \end{equation}
-ensuring that radiation increases with curvature. 
+ensuring that radiation increases with curvature.
 
-We propose the following candidate function:
+Since the gravitational gradient increases toward the core, the emission rate is naturally distributed across the interior. A possible candidate function for \( f(\mathcal{R}) \) is:
+
 \begin{equation}
     f(\mathcal{R}) = f_0 \left( 1 - e^{-\alpha (\mathcal{R} - \mathcal{R}_0)} \right),
 \end{equation}
 where \( f_0 \), \( \alpha \), and \( \mathcal{R}_0 \) are free parameters that need to be constrained. This ensures that radiation grows with curvature but does not diverge indefinitely. However, we stress that the exact form of \( f(\mathcal{R}) \) must be derived from first principles.
 
-\subsection{Balance Between Radiation and Gravitational Collapse}
+\subsection{Energy Conservation and Equilibrium Balance}
 
 For the black hole interior to avoid singularity formation, an equilibrium must be established where radiation emission counteracts the inward collapse of mass-energy.
 
-We propose the approximate balance equation:
+We propose the approximate energy conservation equation:
 \begin{equation}
-    \Gamma_H(\mathcal{R}_c) = \Phi_{\text{collapse}}(\mathcal{R}_c),
+    \int_0^{r_s} \left( \frac{\partial M(r, t)}{\partial t} + \frac{\partial \Phi(r,t)}{\partial r} \right) dr = -\int_0^{r_s} \Gamma_H(r,t) dr.
 \end{equation}
+
 where:
 \begin{itemize}
-    \item \( \mathcal{R}_c \) is the curvature at equilibrium,
-    \item \( \Phi_{\text{collapse}}(\mathcal{R}) \) represents the inward mass-energy flux due to gravitational collapse.
+    \item \( M(r,t) \) is the cumulative mass-energy enclosed within radius \( r \) at time \( t \),
+    \item \( \Phi(r,t) \) represents the net energy flux within the black hole interior,
+    \item \( \Gamma_H(r,t) \) is the local radiation emission rate, which varies with curvature,
+    \item The left-hand side describes the total evolution of the enclosed mass-energy,
+    \item The right-hand side represents the radiation flux across the interior, ensuring energy conservation.
 \end{itemize}
 
-This heuristic condition suggests that at sufficiently high curvature, radiation effects become strong enough to halt further collapse. However, a rigorous derivation of \( \Phi_{\text{collapse}} \) is required to confirm whether such an equilibrium naturally arises from fundamental physics.
-
-\subsection{Energy Conservation and Core Formation}
-
-The evolution of mass-energy within the black hole interior follows a local conservation equation:
+At equilibrium, the local radiation emission must be sufficient to counteract the inward flux due to collapse. This leads to the heuristic balance condition:
 \begin{equation}
-    \frac{\partial M(r, t)}{\partial t} + \frac{\partial \Phi(r,t)}{\partial r} = -\Gamma_H(r, t),
+    \int_0^{r_c} \Gamma_H(r) dr = \int_0^{r_c} \Phi_{\text{collapse}}(r) dr.
 \end{equation}
+
 where:
 \begin{itemize}
-    \item \( M(r,t) \) is the mass-energy contained within radius \( r \),
-    \item \( \Phi(r,t) \) is the net energy flux,
-    \item \( \Gamma_H(r,t) \) represents local radiation loss.
+    \item \( \mathcal{R}_c \) is the equilibrium curvature where radiation counteracts gravitational collapse,
+    \item \( \Gamma_H(r) \) represents the local radiation emission rate,
+    \item \( \Phi_{\text{collapse}}(r) \) represents the inward mass-energy flux due to gravitational collapse.
 \end{itemize}
 
-The core radius \( r_c \) is defined as the radius at which the equilibrium curvature is reached:
+This heuristic condition suggests that at sufficiently high curvature, radiation effects become strong enough to regulate collapse, preventing the singularity from forming. However, a rigorous derivation of \( \Phi_{\text{collapse}}(r) \) is required to confirm whether such an equilibrium naturally arises from fundamental physics.
+
+\subsection{Core Formation and Equilibrium Radius}
+
+The core radius \( r_c \) is defined as the location where the equilibrium curvature is reached:
 \begin{equation}
     \mathcal{R}(r_c) = \mathcal{R}_c.
 \end{equation}
 If \( \mathcal{R}_c \) is associated with quantum gravitational effects, then the core radius is expected to be:
 \begin{equation}
-    r_c \sim \sqrt{\frac{\hbar G}{c^3}},
+    r_c \sim \sqrt{\frac{\hbar G}{c^3}}.
 \end{equation}
 suggesting a Planck-scale structure.
+
+At radii \( r < r_c \), the curvature remains approximately constant at \( \mathcal{R}_c \), preventing the formation of a singularity. This implies that the black hole interior contains a **finite-curvature core** rather than a region of unrestricted collapse.
 
 \subsection{Avoidance of the Singularity}
 
@@ -82,8 +90,8 @@ If equilibrium is reached, the curvature does not diverge, but instead remains f
 
 This implies:
 \begin{itemize}
-    \item The singularity is replaced by a constant-curvature core.
-    \item The mass-energy distribution remains structured rather than a collapsing point.
+    \item The singularity is replaced by a **finite curvature core**.
+    \item The mass-energy distribution remains **structured rather than collapsing to a point**.
     \item The core remains dynamically stable (subject to further stability analysis).
 \end{itemize}
 
@@ -91,8 +99,8 @@ This implies:
 
 If a self-regulating core forms, the evolution of the black hole follows a two-step process:
 \begin{enumerate}
-    \item Hawking radiation emission at the event horizon, leading to gradual black hole evaporation.
-    \item Internal restructuring, where the core dynamically adjusts to maintain equilibrium.
+    \item **Hawking radiation emission at the event horizon**, leading to gradual black hole evaporation.
+    \item **Internal restructuring**, where the core dynamically adjusts to maintain equilibrium.
 \end{enumerate}
 
 As the black hole evaporates, the core radius \( r_c \) may shrink. The long-term behavior depends on whether the core fully evaporates or stabilizes as a remnant.
@@ -102,7 +110,7 @@ As the black hole evaporates, the core radius \( r_c \) may shrink. The long-ter
 While this framework offers an intriguing alternative to classical singularity formation, several theoretical gaps remain:
 \begin{enumerate}
     \item The function \( f(\mathcal{R}) \) must be rigorously derived from quantum field theory in curved spacetime or a quantum gravity approach.
-    \item The balance condition \( \Gamma_H = \Phi_{\text{collapse}} \) is heuristic and requires a deeper understanding of quantum backreaction effects.
+    \item The integral balance condition \( \int \Gamma_H dr = \int \Phi_{\text{collapse}} dr \) is heuristic and requires a deeper understanding of quantum backreaction effects.
     \item Stability analysis, including perturbations and nonlinear effects, is necessary to confirm whether the equilibrium core is dynamically viable.
     \item The late-stage behavior of the black hole—whether it evaporates entirely or leaves behind a remnant—remains uncertain.
 \end{enumerate}
