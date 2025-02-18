@@ -1,12 +1,14 @@
 \section{The Core Hypothesis: A Self-Regulating Black Hole Interior}
 \label{sec:core_hypothesis}
 
-The standard model of black holes, based on general relativity, predicts that matter within the event horizon undergoes unrestricted collapse, forming a singularity where spacetime curvature and energy density diverge. However, quantum effects, particularly those associated with Hawking radiation, suggest that this picture may be incomplete. We propose a self-regulating mechanism within black holes that prevents singularity formation and leads to an equilibrium core of finite curvature.
+The standard model of black holes, based on general relativity, predicts that matter within the event horizon undergoes unrestricted collapse, forming a singularity where spacetime curvature and energy density diverge. However, quantum effects, particularly those associated with Hawking radiation, suggest that this picture may be incomplete. We propose a speculative self-regulating mechanism within black holes that prevents singularity formation and leads to an equilibrium core of finite curvature.
+
+This framework is exploratory in nature and should not be interpreted as a complete theory. Many of the assumptions presented here are heuristic, and a rigorous derivation from fundamental physics—whether through quantum field theory in curved spacetime or quantum gravity—is still lacking. Nonetheless, this conceptual model offers an interesting alternative to singularity formation and may provide insights into the interplay between quantum effects and gravitational collapse.
 
 \subsection{Postulate 1: Curvature-Dependent Local Radiation}
 Hawking radiation is typically derived as a quantum process occurring near the event horizon \cite{hawking1975particle}, where vacuum fluctuations generate particle-antiparticle pairs, with one escaping as radiation. In our framework, we extend this idea by proposing that a similar effect occurs \textit{locally} within the black hole interior, with radiation emission dependent on the local curvature.
 
-Formally, we define the local radiation emission rate as:
+Formally, we introduce a heuristic expression for the local radiation emission rate:
 \begin{equation}
     \Gamma_H(r) = f(\mathcal{R}(r)) \frac{1}{M^2},
 \end{equation}
@@ -21,12 +23,14 @@ We assume that \( f(\mathcal{R}) \) is a monotonic function satisfying:
 \begin{equation}
     \frac{df}{d\mathcal{R}} > 0.
 \end{equation}
-This implies that regions of higher curvature experience stronger radiation effects. 
+This implies that regions of higher curvature experience stronger radiation effects.
 
 At the event horizon, where \( \mathcal{R}(r) \approx \mathcal{R}(r_s) \), we recover standard Hawking radiation. However, as we move deeper into the interior, the radiation rate increases due to rising curvature, eventually modifying the internal structure.
 
+We emphasize that this **localization of Hawking-like radiation is speculative**. Standard Hawking radiation derivations rely on global horizon properties, and it is not clear whether an analogous local effect exists in a rigorous quantum gravitational treatment. Nevertheless, we use this assumption as a working hypothesis to explore the implications of quantum effects on black hole interiors.
+
 \subsection{Postulate 2: Balance Between Radiation and Collapse}
-Within the event horizon, classical physics dictates that matter collapses toward \( r=0 \). However, in our model, the increasing radiation flux at high curvature counteracts this collapse. 
+Within the event horizon, classical physics dictates that matter collapses toward \( r=0 \). However, in our model, the increasing radiation flux at high curvature counteracts this collapse.
 
 We propose that an equilibrium condition is established when the local radiation flux matches the rate of gravitational collapse:
 \begin{equation}
@@ -39,6 +43,8 @@ where:
 \end{itemize}
 
 This balance prevents the curvature from diverging to infinity, stabilizing the core at a finite curvature \( \mathcal{R}_c \).
+
+It is important to note that this balance equation is an **approximate phenomenological description** rather than a rigorously derived relation. The precise formulation of \( \Phi_{\text{collapse}} \), which governs the rate at which mass-energy collapses inward, is highly nontrivial and likely requires a deeper understanding of quantum backreaction effects in strong gravity regimes.
 
 \subsection{Postulate 3: Formation of a Constant Curvature Core}
 If equilibrium is achieved, the black hole interior does not collapse into a singularity. Instead, for radii \( r \leq r_c \), the curvature stabilizes at a constant value:
@@ -59,6 +65,8 @@ This implies:
     \end{equation}
 \end{itemize}
 
+The assumption that \( \mathcal{R}_c \) approaches a fundamental quantum gravitational scale remains **speculative**. While various quantum gravity models predict modifications to singularity formation, no single accepted theory yet provides a conclusive resolution to the problem.
+
 \subsection{Physical Interpretation and Implications}
 This framework suggests that black holes do not have singularities but instead develop structured interiors. The self-regulating mechanism introduces a feedback loop:
 \begin{enumerate}
@@ -67,6 +75,13 @@ This framework suggests that black holes do not have singularities but instead d
     \item Equilibrium is reached when the two effects balance.
 \end{enumerate}
 
-This model aligns with several non-singular black hole proposals, including regular black holes \cite{bardeen1968non, hayward2006formation}, quantum gravity-based structures \cite{bojowald2005nonsingular, rovelli1996black}, and recent proposals for Planck-scale remnants \cite{brustein2018black}. 
+This model aligns with several non-singular black hole proposals, including regular black holes \cite{bardeen1968non, hayward2006formation}, quantum gravity-based structures \cite{bojowald2005nonsingular, rovelli1996black}, and recent proposals for Planck-scale remnants \cite{brustein2018black}. However, unlike some of these models, our framework does not impose an ad hoc energy condition or introduce a new fundamental length scale explicitly—it instead relies on a heuristic quantum backreaction effect.
+
+Despite its appeal, this model is \textbf{not yet a complete theory}. Several key aspects remain open:
+\begin{itemize}
+    \item The function \( f(\mathcal{R}) \) should be derived from first principles in quantum field theory or quantum gravity.
+    \item The balance equation \( \Gamma_H(\mathcal{R}_c) = \Phi_{\text{collapse}}(\mathcal{R}_c) \) requires a deeper understanding of gravitational collapse in quantum-modified spacetimes.
+    \item The stability of this equilibrium state under perturbations is not guaranteed and requires further study.
+\end{itemize}
 
 The next section presents the mathematical framework necessary to formalize these equilibrium conditions.

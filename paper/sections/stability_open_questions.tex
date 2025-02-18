@@ -3,15 +3,17 @@
 
 The self-regulating black hole core model introduces a structured interior where local Hawking-like radiation counteracts gravitational collapse, leading to an equilibrium curvature at \( \mathcal{R}_c \). However, for this framework to be physically viable, the equilibrium state must be stable against perturbations. Additionally, this model raises fundamental questions regarding black hole thermodynamics, information flow, and long-term evolution.
 
+We emphasize that this section provides a heuristic treatment of stability and highlights open problems rather than offering a definitive analysis. A full stability study requires a more detailed treatment of quantum backreaction effects and nonlinear dynamics.
+
 \subsection{Perturbative Stability of the Core}
-A key question is whether small perturbations in curvature or energy density within the core lead to divergence (instability) or are naturally damped (stability). Stability can be analyzed in the following ways:
+A key question is whether small perturbations in curvature or energy density within the core lead to divergence (instability) or are naturally damped (stability). Given the heuristic nature of this framework, we provide a preliminary discussion of potential stability conditions.
 
 \subsubsection{Linear Stability Analysis}
 We define a small perturbation \( \delta \mathcal{R}(r,t) \) around the equilibrium curvature:
 \begin{equation}
     \mathcal{R}(r,t) = \mathcal{R}_c + \delta \mathcal{R}(r,t).
 \end{equation}
-The evolution of \( \delta \mathcal{R} \) is governed by:
+The evolution of \( \delta \mathcal{R} \) can be modeled by an approximate transport equation:
 \begin{equation}
     \frac{\partial \delta \mathcal{R}}{\partial t} + v_r \frac{\partial \delta \mathcal{R}}{\partial r} = -\lambda \delta \mathcal{R},
 \end{equation}
@@ -22,6 +24,8 @@ where:
 \end{itemize}
 
 If \( \lambda > 0 \), perturbations decay over time, suggesting **stability**. If \( \lambda < 0 \), the core structure is unstable, potentially leading to either collapse or dispersion.
+
+The value of \( \lambda \) depends on the radiation response function \( f(\mathcal{R}) \). If radiation increases rapidly with curvature, the feedback mechanism should dampen perturbations. However, if radiation saturates or responds too weakly, the system may be prone to instabilities.
 
 \subsubsection{Energy Density Stability}
 Since curvature and energy density are linked by Einstein’s equations, perturbations in \( \rho \) also affect stability. The key question is whether energy density perturbations reinforce equilibrium or cause runaway behavior.
@@ -36,6 +40,8 @@ where \( \rho_c \) is the equilibrium core density. The governing equation is:
 \end{equation}
 If **radiation outflow adjusts dynamically to stabilize \( \rho_c \)**, the core remains stable.
 
+We emphasize that this analysis remains heuristic; a full stability treatment requires a self-consistent perturbation theory in a quantum gravity framework.
+
 \subsection{Nonlinear Evolution and Late-Stage Dynamics}
 A complete treatment of stability must consider **nonlinear effects**. If the radiation response \( f(\mathcal{R}) \) saturates at high curvatures, feedback mechanisms could prevent instability. However, if radiation is not sufficiently responsive, perturbations could grow, leading to:
 \begin{itemize}
@@ -43,7 +49,7 @@ A complete treatment of stability must consider **nonlinear effects**. If the ra
     \item A catastrophic breakdown of the core, leading to renewed collapse or dispersal.
 \end{itemize}
 
-A full nonlinear stability analysis requires solving the coupled mass-energy and radiation equations numerically.
+A full nonlinear stability analysis requires solving the coupled mass-energy and radiation equations numerically. Additionally, the backreaction of local radiation on the spacetime metric must be incorporated to assess whether the equilibrium state remains self-consistent.
 
 \subsection{Information Retention and Black Hole Evolution}
 One of the major unresolved problems in black hole physics is the fate of information. If the singularity is avoided in favor of a structured core, several possibilities arise:
@@ -52,7 +58,7 @@ One of the major unresolved problems in black hole physics is the fate of inform
     \item The core itself could act as a quantum remnant, preventing information loss.
     \item Information may be redistributed internally but remain inaccessible from the exterior.
 \end{enumerate}
-Determining the core’s role in information flow requires an explicit **quantum description** of the interior radiation process.
+Determining the core’s role in information flow requires an explicit **quantum description** of the interior radiation process. This remains an open problem, as no fully developed theory of black hole interiors currently resolves the information paradox unambiguously.
 
 \subsection{Late-Stage Evolution and Possible Remnants}
 As the black hole loses mass due to Hawking radiation, the equilibrium core should dynamically adjust. Possible end states include:
@@ -61,6 +67,8 @@ As the black hole loses mass due to Hawking radiation, the equilibrium core shou
     \item A stable Planck-scale remnant that persists indefinitely.
 \end{itemize}
 The remnant hypothesis is appealing because it could provide a mechanism for resolving the black hole information paradox, but further work is required to determine whether a self-regulating core naturally transitions into a remnant.
+
+The evaporation dynamics of such a core depend on the detailed form of \( f(\mathcal{R}) \) and how it interacts with Hawking radiation near the event horizon. If radiation emission slows down at high curvature, remnants may persist. If evaporation proceeds unhindered, the black hole may completely evaporate.
 
 \subsection{Open Questions}
 While this framework provides a compelling alternative to classical singularity formation, several questions remain:
@@ -71,5 +79,15 @@ While this framework provides a compelling alternative to classical singularity 
     \item \textbf{Observational Signatures:} Could deviations from classical predictions be detected via gravitational wave echoes or other indirect observations?
     \item \textbf{Final State of Black Holes:} Does this model favor total evaporation or remnant formation?
 \end{enumerate}
+
+\subsection{Limitations of This Analysis}
+Given the speculative nature of this framework, several caveats apply:
+\begin{itemize}
+    \item The perturbation analysis is heuristic and does not incorporate full backreaction effects.
+    \item Stability conclusions depend on the assumed form of \( f(\mathcal{R}) \), which is not yet derived from first principles.
+    \item The possibility of nonlinear instabilities remains open and must be tested numerically.
+\end{itemize}
+
+A full treatment incorporating quantum gravitational corrections is needed to evaluate whether this model represents a viable description of black hole interiors.
 
 The next section will summarize our findings and outline future directions for further investigation.
