@@ -1,0 +1,44 @@
+% !TeX root = ..\towards_non_singular_black_holes.tex
+% -------------------------------------------------
+\section{Introduction}
+\label{sec:intro}
+
+Black holes lie at the intersection of general relativity (GR) and quantum field theory (QFT): they are the most extreme classical solutions of Einstein's equations yet also the stage on which quantum vacuum fluctuations reveal themselves through Hawking radiation. Despite half a century of progress, the \emph{interior} of a black hole remains poorly understood.  In particular, the singularities predicted by the Hawking-Penrose theorems \cite{penrose1965singularity,hawking1975particle} signal a breakdown of classical physics.
+
+\vspace{4pt}
+\paragraph*{The classical picture.}
+For Schwarzschild and Kerr spacetimes the energy conditions ensure that infalling matter must reach a spacelike or timelike singularity in finite proper time. No classical mechanism can halt the divergence of curvature once the event horizon has been crossed.
+
+\vspace{4pt}
+\paragraph*{Quantum hints.}
+Hawking's discovery that black holes radiate thermally \cite{hawking1975particle} established that horizons are not inert. Yet back-reaction calculations in four dimensions are inconclusive: does the interior still develop a singularity as the hole evaporates? Proposals to resolve the issue typically invoke \emph{new UV physics}—string-theoretic fuzzballs, loop-quantum-gravity bounces, Planck stars, or non-singular metrics in asymptotic-safety scenarios \cite{bardeen1968non,hayward2006formation,bojowald2005nonsingular,rovelli1996black,Bonanno2023RegularBH}. By contrast, comparatively little attention has been paid to the possibility that \emph{known} semiclassical effects might themselves arrest collapse.
+
+\vspace{4pt}
+\paragraph*{A curvature-triggered feedback.}
+In this paper we explore such a semiclassical mechanism. The idea is simple:
+\begin{enumerate}[leftmargin=1.1em,label=(\arabic*)]
+  \item Below a curvature threshold \(K_{\mathrm{th}}\) the vacuum evolves adiabatically and particle creation is negligible (Parker's criterion \cite{parker1968}).
+  \item Once \(K\!>\!K_{\mathrm{th}}\) the adiabatic condition fails and local quantum emission turns on, with a rate \(\Gamma_H\propto K^{3/4}\) motivated by the Unruh temperature \(T_{\mathrm{loc}}=a/2\pi\) \cite{Unruh1976}.
+  \item The resulting positive-energy flux propagates outward while a negative-energy partner flows inward, reducing the effective mass density and opposing further collapse.
+\end{enumerate}
+We show that this feedback generically drives the interior toward a finite-curvature, de Sitter-like core.
+
+\vspace{4pt}
+\paragraph*{Why plausibility is not enough.}
+To test the idea we need a self-consistent semiclassical model.
+We therefore:
+\begin{itemize}[leftmargin=*]
+  \item derive the emission law and an integral balance condition in Section~\ref{sec:core_hypothesis};
+  \item solve the Einstein equations with the one-loop trace-anomaly stress tensor in Section~\ref{sec:backreaction};
+  \item analyse linear and preliminary non-linear stability, and discuss observational signatures such as gravitational-wave echoes \cite{CarballoRubio2018,Cardoso2016Echoes} in Section~\ref{sec:stability}.
+\end{itemize}
+
+\vspace{4pt}
+\paragraph*{Scope and caveats.}
+Our analysis is restricted to (i) static, spherically symmetric interiors; (ii) conformal quantum fields at one loop; (iii) a phenomenological match of the emission constant \(C\) to the standard Hawking flux. Rotation, charge, non-local higher-loop effects and full numerical evolution of dynamical collapse are deferred to future work.
+
+\vspace{4pt}
+\paragraph*{Significance.}
+If borne out, a curvature-triggered feedback would provide a \emph{new semiclassical route} to non-singular black holes, predictive in both its interior geometry and its external signatures. Conversely, observational non-detection of the predicted echoes and shadow shifts would constrain the allowed parameter space, pushing us toward other resolutions of the singularity problem.
+
+The rest of the paper is organised as follows. Section~\ref{sec:core_hypothesis} formulates the interior emission law and energy-balance criterion. Section~\ref{sec:backreaction} derives the constant-curvature core from the semiclassical Einstein equations. Section~\ref{sec:stability} investigates stability and possible observational tests. Section~\ref{sec:conclusions} summarises our findings and outlines extensions needed to integrate the mechanism into a full quantum-gravity framework.

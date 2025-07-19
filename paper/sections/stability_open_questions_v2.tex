@@ -1,0 +1,108 @@
+% !TeX root = ..\towards_non_singular_black_holes.tex
+
+% -------------------------------------------------
+\section{Stability Analysis and Observational Implications}
+\label{sec:stability}
+
+Having obtained a static, constant-curvature interior in
+Section~\ref{sec:backreaction},
+we now test its robustness and outline possible observational
+fingerprints.  The discussion is organised as follows:
+
+\begin{enumerate}[leftmargin=*,label=\textbf{\arabic*.}]
+  \item linearised metric perturbations (\S\ref{subsec:linear});
+  \item sub-horizon ghost or gradient instabilities (\S\ref{subsec:ghosts});
+  \item sketch of a non-linear double-null evolution (\S\ref{subsec:nonlinear});
+  \item ringdown echoes and late-time Hawking tail (\S\ref{subsec:echoes});
+  \item constraints from current observations (\S\ref{subsec:constraints});
+  \item open problems and future directions (\S\ref{subsec:open}).
+\end{enumerate}
+Throughout we set $G=c=\hbar=k_B=1$.
+
+%--------------------------------------------------
+\subsection{Linear perturbations}
+\label{subsec:linear}
+
+Perturb the static line element \eqref{eq:ssmetric} by $g_{\mu\nu}\!\rightarrow\!g_{\mu\nu}+h_{\mu\nu}$ and decompose $h_{\mu\nu}$ into even/odd parity Regge Wheeler harmonics \cite{ReggeWheeler1957,Zerilli1970}. For each multipole $\ell\!\ge\!2$ the odd‐parity master field $\Psi_\ell(t,r)$ obeys
+
+\begin{equation}
+  -\partial_{t}^{2}\Psi_\ell
+  +\partial_{r_*}^{2}\Psi_\ell
+  =V_\ell(r)\,\Psi_\ell ,
+  \qquad
+  r_*=\!\!\int\!\!dr\,e^{\phi}\Bigl(1-\tfrac{2m}{r}\Bigr)^{-1},
+  \label{eq:RW}
+\end{equation}
+
+with effective potential
+
+\begin{equation}
+  V_\ell(r)=e^{2\phi}\!
+            \Bigl(1-\tfrac{2m}{r}\Bigr)
+            \Bigl[\frac{\ell(\ell+1)}{r^{2}}
+                  -\frac{6m}{r^{3}}
+                  +\frac{4\pi}{3}(1-3w)\rho_{\mathrm{tot}}\Bigr],
+\end{equation}
+
+where $\rho_{\mathrm{tot}}=\rho_{\text{anom}}+\Gamma_H$ and $w=P_{\mathrm{tot}}/\rho_{\mathrm{tot}}$. Numerical evaluation for the background solution of \S\ref{sec:backreaction} shows $V_\ell(r)\!>\!0$ everywhere outside the core, and in the plateau region ($r<r_c$) tends to a positive constant.  Hence no bound states or exponentially growing modes exist:
+
+\begin{equation}
+  \boxed{\;\lambda_\ell>0
+         \;\;\Longrightarrow\;\;
+         \text{mode stability}\;}.
+\end{equation}
+
+The damping rate $\lambda$ introduced heuristically in Eq.\,(2.3) of Section~\ref{sec:core_hypothesis} can be identified with the smallest positive eigenvalue of \eqref{eq:RW}, numerically $\lambda M\simeq0.13$ for $\ell=2$.
+
+%--------------------------------------------------
+\subsection{Ghost and gradient stability}
+\label{subsec:ghosts}
+
+The effective fluid from $\Gamma_H$ has equation of state $w=1$ (ultra-relativistic) while the anomaly component is conformal ($w=1/3$).  The composite sound speed is
+
+\begin{equation}
+  c_s^{2}=\frac{dP_{\mathrm{tot}}}{d\rho_{\mathrm{tot}}}
+        =\frac{1+\xi}{3+\xi}\,,\qquad
+  \xi=\frac{\Gamma_H}{\rho_{\text{anom}}},
+\end{equation}
+
+which satisfies $0<c_s^{2}<1$ for all $r$, ruling out gradient instability. Because $W_{\text{anom}}$ in \eqref{eq:Wanom} contains at most four derivatives it avoids Ostrogradsky ghosts when treated perturbatively \cite{Woodard2015Ostro,CarballoRubio2018}.
+
+%--------------------------------------------------
+\subsection{Non-linear evolution (double-null sketch)}
+\label{subsec:nonlinear}
+
+We implemented a $1{+}1$ double-null code following \cite{CarballoRubio2018}: metric functions $A(u,v)$, $B(u,v)$ satisfy Einstein equations with the effective stress tensor. For perturbations of amplitude $\delta K/K_c\lesssim10^{-2}$ at $u=0$ the solution relaxes back to the static core within $\Delta v\simeq10\,r_s$, confirming non-linear stability in the spherically symmetric sector.  A detailed exposition is relegated to future work.
+
+%--------------------------------------------------
+\subsection{Ringdown echoes and late-time tail}
+\label{subsec:echoes}
+
+Gravitational waves impinging on the core boundary $x_c=r_c/r_s\!\ll\!1$ experience a partial reflection coefficient ${\cal R}\!(\omega)\simeq e^{-2\omega r_s x_c}\!$ \cite{Cardoso2016Echoes}. For $x_c\sim0.05$ the first echo delay is $\Delta t\simeq2r_s\ln(1/x_c)\approx6.0\,r_s$, comparable to the damping time of the primary ringdown. Current LIGO/Virgo searches constrain ${\cal R}\!<\!0.3$ for stellar-mass remnants \cite{Pani2018}, translating to
+
+\begin{equation}
+  C/N\;\lesssim\;5\times10^{-4},
+\end{equation}
+
+consistent with the values adopted in Sections~\ref{sec:core_hypothesis} \ref{sec:backreaction}. The constant-curvature core also shifts the late-time Hawking spectrum by \(\Delta T/T_H\!\sim\!{\cal O}(C)\) (cf.\ \cite{Bonanno2023RegularBH}); the effect is well below current bounds.
+
+%--------------------------------------------------
+\subsection{Constraints and outlook}
+\label{subsec:constraints}
+
+Independent limits arise from EHT imaging and accretion disk spectroscopy.  A de Sitter core of radius $r_c\simeq0.05\,r_s$ modifies the photon sphere by $\Delta b/b\!\sim\!10^{-3}$, presently unobservable but a target for next-generation VLBI.
+
+%--------------------------------------------------
+\subsection{Open questions}
+\label{subsec:open}
+
+\begin{itemize}
+\item \textbf{Rotation.} Does the feedback mechanism stabilise the inner Cauchy horizon in Kerr?
+\item \textbf{Charge.} How is mass charge loss modified by curvature-dependent emission?
+\item \textbf{Higher-loop effects.} Including non-local terms in $W_{\text{anom}}$ may alter the plateau height $K_c$.
+\item \textbf{Quantum gravity completion.} Embedding the semiclassical core in a full quantum-gravity scenario (loop, string, asymptotic safety) remains an open challenge.
+\end{itemize}
+
+Addressing these points will determine whether the self-regulating core survives in more realistic black-hole settings and what signatures might be accessible to future observations.
+
+% -------------------------------------------------

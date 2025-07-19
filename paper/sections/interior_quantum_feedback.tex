@@ -1,0 +1,99 @@
+% !TeX root = ..\towards_non_singular_black_holes.tex
+
+% -------------------------------------------------
+\section{The Core Hypothesis: Interior Quantum Feedback}
+\label{sec:core_hypothesis}
+
+Classical general relativity predicts relentless collapse to a curvature singularity once matter crosses the event horizon. The *quantum* picture, however, is more nuanced. This challenge to the classical singularity has a rich history, with proposals including geodesically complete regular black holes \cite{bardeen1968non, hayward2006formation, Bonanno2023RegularBH}, and core structures stabilized by quantum gravity effects \cite{bojowald2005nonsingular, rovelli1996black}. Our work proposes a distinct semiclassical feedback mechanism to achieve this regulation. We postulate that **beyond a curvature threshold** the black-hole interior activates a *feedback loop*: tidal curvature $\longrightarrow$ quantum emission $\longrightarrow$ outward energy flux $\longrightarrow$ reduced inward mass flux. This section formulates the mechanism in three steps:
+
+1. identify the non-adiabatic threshold (§\ref{sec:curv_threshold});
+2. derive a curvature-dependent emission rate (§\ref{sec:local_emission});
+3. impose global energy balance to fix a constant-curvature core
+(§§\ref{sec:balance}-\ref{sec:plateau}).\smallskip
+
+Throughout we work in units $G=c=\hbar=k_B=1$ unless displayed otherwise.
+
+%--------------------------------------------------
+\subsection{Curvature threshold for non-adiabaticity}
+\label{sec:curv_threshold}
+
+Let $K(r)=R_{\mu\nu\rho\sigma}R^{\mu\nu\rho\sigma}$ be the Kretschmann scalar. For Schwarzschild, $K(r)=48M^{2}/r^{6}$ so $\ell_c\!:=\!K^{-1/4}=r\,(48M^{2})^{-1/4}$. Parker's criterion \cite{parker1968} implies negligible on-shell creation while the fractional rate of change $\dot{\ell}_c/\ell_c \ll \omega_{\mathrm{loc}}$ for field modes of frequency $\omega_{\mathrm{loc}}$.\footnote{The threshold $K_{\mathrm{th}}$ can also be fixed by requiring the adiabaticity condition $\hbar \dot{\omega}/\omega^2 \sim 1$ to fail for characteristic frequencies.} We encode the breakdown of adiabaticity by a Heaviside switch\,\footnote{Any smooth window with width $\Delta K\ll K_{\mathrm{th}}$ gives the same long-distance behaviour.}  
+\begin{equation}
+  \Theta_K(r)\;=\;\Theta\!\bigl[K(r)-K_{\mathrm{th}}\bigr],
+  \qquad K_{\mathrm{th}}\equiv\varepsilon\,M_\mathrm{P}^{4},
+  \label{eq:ThetaSwitch}
+\end{equation}
+with dimensionless $\varepsilon\!\lesssim\!10^{-2}$ for stellar black holes and $\varepsilon\!\sim\!1$ for Planck-mass ($M_\mathrm{P}$) holes.
+
+%--------------------------------------------------
+\subsection{Local emission law}
+\label{sec:local_emission}
+
+The effectiveness of this feedback depends on an emission rate that grows with local curvature. We motivate this law by considering the local Unruh temperature $T_{\mathrm{loc}}(r)=a(r)/(2\pi)$ \cite{Unruh1976} for a radially free-falling detector. For $r\ll2M$ \cite{Barbado2011} its proper acceleration is
+\begin{equation}
+  a(r)\;=\;\sqrt{\frac{M}{2}}\;r^{-3/2}\;[1+\mathcal{O}(r/2M)] ,
+\end{equation}
+which yields $T_{\mathrm{loc}}(r)$. Treating the interior quantum field as a thermal gas\footnote{We ignore frequency-dependent grey-body factors that modulate the spectrum for an exterior observer, as our focus is the interior energy balance.} at temperature $T_{\mathrm{loc}}$, the energy density follows the Stefan-Boltzmann law, $\rho \propto T_{\mathrm{loc}}^{4}$, and a number flux $\gamma\sim\rho/T\propto a^{3}$. Expressed through $K$, $a^{3}\!\propto\!K^{3/4}$, so we posit
+\begin{equation}
+  \boxed{\;
+    \Gamma_H(r)=\frac{C}{M^{2}}\,[K(r)]^{3/4}\,\Theta_K(r)
+  \;}
+  \label{eq:GammaLaw}
+\end{equation}
+with one dimensionless constant $C$ that will be fixed by matching to the standard Hawking flux in the $r\!\to\!2M^{-}$ limit \cite{hawking1975particle}. Equation \eqref{eq:GammaLaw} replaces the earlier heuristic $f(R)$ proposal and vanishes identically in regions where adiabaticity still holds ($\Theta_K=0$).
+
+%--------------------------------------------------
+\subsection{Integral energy balance and the core radius}
+\label{sec:balance}
+
+This local emission provides an outward pressure. A stable core can form where this outward radiation flux integrally balances the inward flux of collapsing matter. Let $\Phi_{\mathrm{coll}}(r)$ denote the inward rest-mass flux of the collapsing fluid measured in the free-fall frame.\footnote{For this quasi-static treatment, we assume $\Phi_{\mathrm{coll}}$ is constant, effectively freezing the slow exterior evaporation of the black hole.} Assuming spherical symmetry the *net* flux through a sphere of radius $r$ is
+\[
+  \mathcal{F}(r)=4\pi r^{2}\bigl[\Phi_{\mathrm{coll}}(r)-\Gamma_H(r)\bigr].
+\]
+We define the **core radius $r_c$** by the first zero of $\mathcal{F}$ (inflow equals outflow):
+\begin{equation}
+  \int_{0}^{r_c}\!dr\,4\pi r^{2}\,\Phi_{\mathrm{coll}}(r)
+  \;=\;
+  \int_{0}^{r_c}\!dr\,4\pi r^{2}\,\Gamma_H(r).
+  \label{eq:balance}
+\end{equation}
+Given $\Phi_{\mathrm{coll}}$ (dust or stiff fluid) and Eq.\,\eqref{eq:GammaLaw}, condition \eqref{eq:balance} determines a unique $r_c(C,M,\varepsilon)$.
+
+%--------------------------------------------------
+\subsection{Constant-curvature plateau}
+\label{sec:plateau}
+
+Inside $r\le r_c$ the cancellation \eqref{eq:balance} implies $\partial_r\mathcal{F}=0$. Semiclassical Einstein equations $G_{\mu\nu}=\langle T_{\mu\nu}\rangle$ then force the geometry toward a maximally symmetric (de Sitter-like) solution with $K=K_c=\text{const.}$  A convenient parametrisation is 
+\begin{equation}
+  ds^{2}
+  =-e^{2\phi(r)}dt^{2}+\frac{dr^{2}}{1-H^{2}r^{2}}+r^{2}d\Omega^{2},
+  \qquad K_c=24\,H^{4}.
+  \label{eq:dSmetric}
+\end{equation}
+In the pure de Sitter limit, $e^{2\phi}=1$; we retain the function $\phi(r)$ to accommodate small back-reaction effects discussed in \S\ref{sec:backreaction}. Here $H$ is fixed by the anomaly-induced stress tensor discussed in Section \ref{sec:backreaction}.
+
+%--------------------------------------------------
+\subsection{Model Parameters, Assumptions, and Open Questions}
+\label{sec:param_fix}
+
+\paragraph{Matching $C$.}
+Expanding \eqref{eq:GammaLaw} near $r\!=\!2M^{-}$ and equating its integrated flux to the standard Hawking power $P_H= (\pi^2/60) T_H^4 A$ (where $A=4\pi r_s^2$) fixes $C\simeq6.1\times10^{-4}$ for a massless scalar; the value scales with the number of field species, $C \propto N$, which is important for the back-reaction analysis. The number changes for other field content but remains $\mathcal{O}(10^{-4}$-$10^{-3})$.
+
+\paragraph{Regime of validity.}
+The present section assumes:
+\begin{itemize}
+    \item conformal field theory stress tensors (trace anomaly coefficients   $\alpha,\beta,\gamma$ fixed in §\ref{sec:backreaction});
+    \item spherical symmetry and slow exterior evaporation;
+    \item the threshold $K_{\mathrm{th}}$ chosen well below the Planck scale for astrophysical holes, so that semiclassical gravity still applies up to, but not beyond, the core.
+\end{itemize}
+
+\paragraph{Open Questions.}
+Several key aspects of this model require further investigation:
+\begin{itemize}
+    \item A first-principles derivation of the emission law (Eq. \ref{eq:GammaLaw}) and the constant $C$ from quantum field theory in curved spacetime remains the primary theoretical challenge.
+    \item A more sophisticated model for the collapsing matter flux, $\Phi_{\mathrm{coll}}(r)$, is needed to fully solve the balance condition (Eq. \ref{eq:balance}).
+    \item While linear stability is examined in \S\ref{sec:stability}, the full non-linear stability of the constant-curvature core under arbitrary perturbations is not yet established and is a critical area for future work.
+\end{itemize}
+Later sections test the self-consistency (§\ref{sec:backreaction}) and linear stability (§\ref{sec:stability}) of this constant-curvature core.
+
+% -------------------------------------------------

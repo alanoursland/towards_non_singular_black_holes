@@ -1,0 +1,69 @@
+% !TeX root = ..\towards_non_singular_black_holes.tex
+% -------------------------------------------------
+\section{Conclusions and Outlook}
+\label{sec:conclusions}
+
+We have presented a semiclassical scenario in which the \emph{interior} of a black hole becomes self-regulating rather than collapsing to a curvature singularity. The key ingredients, developed in Sections~\ref{sec:core_hypothesis}-\ref{sec:stability}, are:
+
+\begin{enumerate}[leftmargin=*]
+    \item A curvature-triggered emission law, \(\displaystyle \Gamma_H = \dfrac{C}{M^{2}}\, K^{3/4}\, \Theta(K-K_{\mathrm{th}})\) (Eq.\,\eqref{eq:GammaLaw}), motivated by the local Unruh temperature.
+    \item A self-consistent interior metric obtained by solving \(G_{\mu\nu} =\langle T_{\mu\nu}\rangle_{\text{anom}} +T_{\mu\nu}^{(\Gamma_H)}\) (Eq.\,\eqref{eq:semiEinstein}), yielding a constant-Kretschmann plateau \(K_c\sim1.4\,K_{\mathrm{th}}\) and a core radius \(r_c\propto M^{1/3}\) (Fig.\,\ref{fig:Kprofile}).
+    \item Linear and preliminary non-linear analyses that reveal no exponentially growing modes and a damping rate \(\lambda M\simeq0.13\) for the least-damped perturbation (Sec.\,\ref{sec:stability}).
+\end{enumerate}
+
+Taken together, these results constitute a \emph{falsifiable} alternative to classical singularity formation: if local curvature-dependent quantum emission above a threshold exists, a finite-curvature, de Sitter-like core should emerge.
+
+%--------------------------------------------------
+\subsection{Model strengths and caveats}
+
+\paragraph{Strengths.}
+The mechanism relies only on well-defined semiclassical inputs (trace anomaly + Unruh temperature) and predicts analytic scaling laws \(r_c\!\propto\!M^{1/3}\), \(H^{2}\!\propto\!C^{2/3}\). Mode stability and the absence of Cauchy-horizon pathologies in the static case make the solution dynamically credible.
+
+\paragraph{Limitations.}
+The emission parameter \(C\) is fixed phenomenologically by matching to Hawking flux; a first-principles derivation from QFT in curved space is still missing. The anomaly stress tensor is taken at one loop and for conformal fields only. Rotation, charge, and non-local higher-loop terms are not yet included.
+
+%--------------------------------------------------
+\subsection{Near-term theory tasks}
+
+\begin{enumerate}[label=\textbf{T\arabic*},leftmargin=*]
+  \item \emph{Derive \(C\) and \(K_{\mathrm{th}}\) from first principles}. Evaluate detector response in a collapsing background to confirm the \(K^{3/4}\) scaling and normalisation.
+  \item \emph{Full point-splitting stress tensor}. Replace the compact anomaly approximation with the exact Christensen expressions and recompute the core metric.
+  \item \emph{Extend to Kerr and Reissner-Nordström}. Track the fate of the inner horizon under curvature-dependent emission.
+\end{enumerate}
+
+%--------------------------------------------------
+\subsection{Numerical programme}
+
+\begin{itemize}[leftmargin=*]
+  \item \textbf{1+1 double-null evolutions:} include exterior Hawking flux and follow the formation of the plateau from realistic collapse initial data.
+  \item \textbf{3-D perturbative evolutions:} inject quadrupolar distortions to test non-axisymmetric stability.
+  \item \textbf{Parameter sweep:} map out the $(C,N,\varepsilon)$ space separating stable cores, runaway collapse, and over-expansion.
+\end{itemize}
+
+%--------------------------------------------------
+\subsection{Observational prospects}
+
+\begin{itemize}[leftmargin=*]
+  \item \emph{Gravitational-wave echoes.} For $x_c\sim0.05$ the first echo delay is $\Delta t\approx6\,r_s$; template searches in LIGO/Virgo-KAGRA O4+ data can constrain ${\cal R}(\omega)$ and, hence, $C/N$ at the $10^{-4}$ level.
+  \item \emph{Shadow shifts.} A de Sitter core modifies the photon-sphere impact parameter by $\Delta b/b\sim10^{-3}$—a target for next-generation EHT.
+  \item \emph{Late-tail evaporation.} The anomaly-modified interior changes the Hawking temperature by $\Delta T/T_H\sim C$ at $t\gtrsim M^{3}$, potentially relevant for primordial micro-black-hole searches.
+\end{itemize}
+
+%--------------------------------------------------
+\subsection{Toward a quantum-gravity embedding}
+
+The feedback-core scenario sits between classical GR and full
+quantum gravity.  Natural next steps include:
+
+\begin{enumerate}[leftmargin=*]
+  \item confronting the model with loop-quantum-gravity bounces and fuzzball microstate geometries;
+  \item exploring whether the curvature threshold \(K_{\mathrm{th}}\) can arise from running couplings in asymptotically safe gravity;
+  \item investigating holographic duals of a constant-curvature core.
+\end{enumerate}
+
+%--------------------------------------------------
+\subsection{Final outlook}
+
+Our results show that a curvature-triggered semiclassical feedback can arrest collapse \emph{before} reaching the Planck regime, producing a finite, mode-stable core with potentially observable
+signatures. The next three years should settle the question: detailed numerical simulations and upgraded gravitational-wave detectors will either corroborate or exclude the parameter space in which
+self-regulating black-hole interiors exist.  Either outcome will sharpen our understanding of the interplay between quantum fields and strong gravity.
